@@ -8,7 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}   # ghcr.io/OWNER/REPO
-  WEBAPP_NAME: YOUR_AZURE_WEBAPP_NAME    # <--- change this to your app's name
+  WEBAPP_NAME: Docker
 
 jobs:
   test-build-push:
