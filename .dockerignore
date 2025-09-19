@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.env
+.venv
+.cache/
+.git/
+tests/__pycache__/
