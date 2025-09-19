@@ -11,10 +11,10 @@ Using **DistilBERT (SST-2)** via HuggingFace pipeline:
 - `POST /predict` → body `{"text":"..."}`
 - `POST /predict_batch` → body `{"texts":["...","..."]}`
 
+⚠️ Note: This app is hosted on Azure Free tier (F1).  
+If it shows "Web App Stopped (403)", please wait 1–2 minutes after visiting the link — the service may need to be restarted.
+
 Run locally:
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-# visit http://127.0.0.1:8000/docs```
-
-⚠️ Note: This app is hosted on Azure Free tier (F1).  
-If it shows "Web App Stopped (403)", please wait 1–2 minutes after visiting the link — the service may need to be restarted.
+# visit http://127.0.0.1:8000/docs
