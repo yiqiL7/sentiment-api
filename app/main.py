@@ -33,3 +33,7 @@ async def timing(req, call_next):
     resp = await call_next(req)
     logger.info("%s %s -> %s in %.1fms", req.method, req.url.path, resp.status_code, (time.time()-t0)*1000)
     return resp
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Sentiment Analysis API!"}
