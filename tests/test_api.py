@@ -19,3 +19,11 @@ def test_predict_batch():
     assert r.status_code == 200
     body = r.json()
     assert isinstance(body, list) and len(body) == 2
+
+def test_predict_validation(client=TestClient(app)):
+    r = client.post("/predict", json={"text": ""})
+    assert r.status_code == 422
+
+def test_batch_mixed(client=TestClient(app)):
+    r = client.post("/predict_batch", json={"texts": ["ok", ""]})
+    assert r.status_code in (200, 422)
