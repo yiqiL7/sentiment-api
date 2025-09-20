@@ -49,6 +49,8 @@ pip install -r requirements.txt
 ```bash
 uvicorn app.main:app --reload --port 8000
 ```
+Open: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
 # Run with Docker
 ### Build Docker image
 ```bash
@@ -58,6 +60,7 @@ docker build -t sentiment-api .
 ```bash
 docker run -d -p 8000:8000 sentiment-api
 ```
+Open: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ## Tests
 ### Unit tests (local)
